@@ -1,0 +1,76 @@
+telegram username: panda.panda10
+
+GitHub. HW_2
+1. На локальном репозитории сделать ветки для:
+- Postman
+- Jmeter
+- CheckLists
+- Bug Reports
+- SQL
+- Charles
+- Mobile testing
+
+git branch Postman
+git branch Jmeter
+git branch CheckLists
+git branch Bug-Reports
+git branch SQL
+git branch Charles
+git branch Mobile-testing
+
+2. Запушить все ветки на внешний репозиторий
+
+git push -u --all
+
+3. В ветке Bug Reports сделать текстовый документ со структурой баг репорта
+
+git checkout Bug Reports
+cat > bug_report.txt
+ФИО исполнителя, Окружение, ОС окружения 
+Название таска: Должно содержать указание места и конкретно в чём баг.
+Описание ошибки: Описание как воспроизвести баг пошаговое.
+Результат: Здесь пишем конкретно что произошло, что заставило вас написать этот таск.
+Ожидаемый результат: Как вы хотите чтобы было.
+enter
+ctrl + C
+
+4. Запушить структуру багрепорта на внешний репозиторий
+
+git add bug_report.txt | git commit -m "add file bug_report"
+git push
+
+5. Вмержить ветку Bag Reports в Main
+
+git checkout main
+git merge Bug-Reports -m "merge_bug_report"
+
+6. Запушить main на внешний репозиторий.
+
+git push
+
+7. В ветке CheckLists набросать структуру чек листа.
+
+git checkout CheckLists
+cat > checklists.txt
+Выполняемая задача: cтатус.
+Регистрация по e-mail: passed.
+Регистрация через Facebook: failed.
+enter
+ctrl + C
+
+8. Запушить структуру на внешний репозиторий
+
+git add checklists.txt | git commit -m "add file checklists.txt"
+git push
+
+9. На внешнем репозитории сделать Pull Request ветки CheckLists в main
+
+on the https://github.com/panda-julia click to the repository Github-branch and click the button "Compare & pull request"
+Next Leave a comment write "add file checklists.txt" and click the button "Create pull request"
+Next click the button "Merge pull request"
+Next click the button "Confirm merge"
+
+10. Синхронизировать Внешнюю и Локальную ветки Main
+
+git checkout main
+git pull
